@@ -356,8 +356,8 @@ class AsyncChatbot:
         """
         async with async_playwright() as p:
             # In new method, you need to add your "chrome_user_data_dir" and "chrome_executable_path" in the config file
-            browser = await p.chromium.launch_persistent_context(user_data_dir = self.config.get("chrome_user_data_dir"), # eg. "C:/Users/YourName/AppData/Local/Google/Chrome/User Data", 
-                executable_path = self.config.get("chrome_executable_path"), # eg. "C:/Program Files/Google/Chrome/Application/chrome.exe",
+            browser = await p.chromium.launch_persistent_context(user_data_dir = self.config.get("chrome_user_data_dir"), # eg. "C:/Users/YourName/AppData/Local/Google/Chrome/User Data" 
+                executable_path = self.config.get("chrome_executable_path"), # eg. "C:/Program Files/Google/Chrome/Application/chrome.exe"
                 headless=False,
             );
             # Old method will always open a Incognito browser
